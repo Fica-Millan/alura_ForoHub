@@ -32,7 +32,6 @@ public class TopicoService {
     private MensajeRepository mensajeRepository;
 
 
-
     /**
      * Registra un nuevo tópico en el repositorio.
      *
@@ -56,7 +55,6 @@ public class TopicoService {
     }
 
 
-
     /**
      * Lista todos los tópicos activos del repositorio con paginación.
      *
@@ -69,7 +67,6 @@ public class TopicoService {
     public Page<DatosListadoTopico> listarTopicos(Pageable paginacion) {
         return topicoRepository.findAllActive(paginacion).map(DatosListadoTopico::new);
     }
-
 
 
     /**
@@ -88,7 +85,6 @@ public class TopicoService {
                         WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(TopicoController.class)
                                 .listadoTopicos(paginacion)).withSelfRel()));
     }
-
 
 
     /**
@@ -126,6 +122,7 @@ public class TopicoService {
      * @return Un Optional que contiene el tópico si se encuentra, de lo contrario, un Optional vacío.
      */
     public Optional<Topico> buscarTopicoPorId(Long id) {
+
         return topicoRepository.findById(id);
     }
 
@@ -236,7 +233,6 @@ public class TopicoService {
     }
 
 
-
     /**
      * Elimina definitivamente un mensaje de un tópico.
      *
@@ -270,6 +266,4 @@ public class TopicoService {
         // Eliminar el mensaje de la base de datos
         mensajeRepository.deleteById(idMensaje);
     }
-
-
 }

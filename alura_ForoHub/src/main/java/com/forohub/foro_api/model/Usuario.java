@@ -36,7 +36,7 @@ public class Usuario implements UserDetails {
     private String email;
 
     @NotNull(message = "El campo clave no puede ser nulo")
-    @Size(min = 8, max = 300, message = "La clave debe tener entre 6 y 255 caracteres")
+    @Size(min = 6, max = 300, message = "La clave debe tener entre 6 y 300 caracteres")
     private String clave;
 
     @CreationTimestamp

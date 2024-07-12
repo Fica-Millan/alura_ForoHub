@@ -22,5 +22,4 @@ public record DatosListadoMensaje(Long id,
         this.fecha = fecha;
         this.autor = autor;
     }
-
 }

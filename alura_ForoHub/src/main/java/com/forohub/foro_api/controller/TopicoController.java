@@ -110,7 +110,6 @@ public class TopicoController {
     }
 
 
-
      /**
      * Busca un tópico en particular según su ID.
      *
@@ -132,7 +131,6 @@ public class TopicoController {
             return ResponseEntity.notFound().build();
         }
     }
-
 
 
     /**
@@ -159,7 +157,6 @@ public class TopicoController {
     }
 
 
-
     /**
      * Agrega un nuevo mensaje a un tópico existente.
      *
@@ -180,7 +177,6 @@ public class TopicoController {
     }
 
 
-
     /**
      * Marca un tópico como "CERRADO".
      *
@@ -195,7 +191,6 @@ public class TopicoController {
         topicoService.cerrarTopico(id);
         return ResponseEntity.ok("Tópico cerrado exitosamente");
     }
-
 
 
     /**

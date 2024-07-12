@@ -29,6 +29,7 @@ public class AuthenticationController {
     @Autowired
     private TokenService tokenService;
 
+
     /**
      * Autentica a un usuario y genera un token JWT.
      *
